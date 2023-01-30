@@ -1,4 +1,4 @@
-import { GearIcon } from '@primer/octicons-react'
+import { GearIcon, TrashIcon } from '@primer/octicons-react'
 import { useEffect, useState } from 'preact/hooks'
 import { memo, useCallback } from 'react'
 import ReactMarkdown from 'react-markdown'
@@ -84,6 +84,9 @@ function ChatGPTQuery(props: Props) {
           <span className="font-bold">ChatGPT</span>
           <span className="cursor-pointer leading-[0]" onClick={openOptionsPage}>
             <GearIcon size={14} />
+          </span>
+          <span className="cursor-pointer leading-[0]">
+            <TrashIcon size={14} />
           </span>
           <ChatGPTFeedback
             messageId={answer.messageId}
